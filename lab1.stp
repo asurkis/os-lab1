@@ -8,27 +8,27 @@ probe begin {
    cnt_close = 0
 }
 
-probe syscall.cnt_write {
+probe syscall.write {
    if (execname() == "lab1.out")
    	cnt_write += 1
 }
 
-probe syscall.cnt_read {
+probe syscall.read {
    if (execname() == "lab1.out")
    	cnt_read += 1
 }
 
-probe syscall.cnt_open {
+probe syscall.open {
    if (execname() == "lab1.out")
    	cnt_open += 1
 }
 
-probe syscall.cnt_close {
+probe syscall.close {
    if (execname() == "lab1.out")
    	cnt_close += 1
 }
 
-probe syscall.cnt_futex {
+probe syscall.futex {
    if (execname() == "lab1.out")
       cnt_futex += 1
 }
